@@ -13,11 +13,12 @@ A **modernized** and **custom-designed** XAMPP phpMyAdmin interface and dashboar
 ---
 
 ## 📸 Screenshots
+### 🖥️ XAMPP Custom Dashboard
+![XAMPP Custom Dashboard](https://raw.githubusercontent.com/mrabhin03/Xampp-Custom-phpMyAdmin-AND-dashboard-designs/main/Screenshots/dashboard.png)
+
 ### 🎨 Custom phpMyAdmin UI
 ![phpMyAdmin Custom UI](https://raw.githubusercontent.com/mrabhin03/Xampp-Custom-phpMyAdmin-AND-dashboard-designs/main/Screenshots/phpMyAdmin.png)
 
-### 🖥️ XAMPP Custom Dashboard
-![XAMPP Custom Dashboard](https://raw.githubusercontent.com/mrabhin03/Xampp-Custom-phpMyAdmin-AND-dashboard-designs/main/Screenshots/dashboard.png)
 
 ---
 
