@@ -1,0 +1,127 @@
+/* body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+} */
+#outputMain header{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 20px;
+}
+#outputMain h1{
+    margin: 0;
+    color: white;
+}
+#outputMain .inputs{
+    display: flex;
+    max-width: 750px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 20px;
+    gap: 15px;
+}
+#outputMain select{
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.864);
+    /* color: white; */
+    font-size: 17px;
+    padding: 8px 50px;
+    padding-left: 10px;
+    border-radius: 5px;
+    /* text-align: center; */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.347);
+    margin-top: 5px;
+}
+#output{
+    color: white;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.inputs label{
+    color: white;
+    font-size: 17px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.details{
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+    height: fit-content;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.347);
+}
+.details td,.details th{
+    padding: 14px;
+}
+.details td{
+    max-width: 350px;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    white-space: normal;
+}
+
+
+.details tr td:first-child{
+    border-left: none;
+}
+.details th{
+    color: white;
+}
+.details thead{
+    background-color: rgba(20, 111, 222, 0.627) !important;
+    color: white !important;
+}
+table {
+background-color: transparent;
+}
+
+.details thead th:first-child{
+    border-top-left-radius: 10px;
+}
+.details thead th:last-child{
+    border-top-right-radius: 10px;
+}
+.details tbody tr:last-child td:first-child{
+    border-bottom-left-radius: 10px;
+}
+.details tbody tr:last-child td:last-child{
+    border-bottom-right-radius: 10px;
+}
+.details tbody tr:nth-child(even) {
+    background-color: rgba(167, 202, 253, 0.842);
+    color: white !important;
+}
+.details tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.875);
+}
+
+@media (max-width:600px) {
+    table th,table td{
+        font-size: 14px !important;
+    }
+    .details td{
+        max-width: 150px;
+    }
+}
+@media (max-width:440px) {
+    #outputMain .inputs{
+        flex-direction: column;
+    }
+    table th,table td{
+        font-size: 12px !important;
+    }
+}

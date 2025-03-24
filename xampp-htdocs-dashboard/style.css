@@ -1,0 +1,356 @@
+#Loader-Main{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.377);
+    position: fixed;
+    backdrop-filter: blur(10px);
+    z-index: 3;
+    height: 100%;
+    display: none;
+    place-content: center;
+    
+}
+
+*{
+  -webkit-tap-highlight-color: transparent;
+}
+/* From Uiverse.io by JulanDeAlb */ 
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 2.3em;
+  /* Define the transition for transforming the SVG */
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  /* Define the transition for transforming the Stroke */
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+body.loader #Loader-Main{
+    display: grid;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+body.loader{
+    overflow: hidden;
+}
+.hero {
+    background-color: #00000042;
+}
+.top-bar-section ul li > a {
+    background: transparent !important;
+}
+.top-bar ,.top-bar-section ul {
+    background-color: transparent;
+}
+.contain-to-grid {
+    background: #1b334ce6;
+}
+.hero h1 {
+    color: white;
+    margin-bottom: 0 !important;
+}
+.the-container{
+    /* background-color: red; */
+    overflow: auto;
+    height: 100vh;
+}
+body{
+    background-image: url(images/BgImg.jpg);
+    background-position: inherit;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.header{
+    opacity: 0;
+    animation: opaci .3s ease-in-out forwards;
+    animation-delay: 1.2s;
+}
+.wrapper{
+    opacity: 0;
+    animation: opaci .3s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+.hero{
+    opacity: 0;
+    animation: opaci .3s ease-in-out forwards;
+    animation-delay: 1.8s;
+}
+#outputMain{
+    opacity: 0;
+    animation: opaci .3s ease-in-out forwards;
+    animation-delay: 2s;
+}
+.footer{
+    background-color: #00000066;
+    max-width: 100% !important;
+    opacity: 0;
+    animation: opaci .3s ease-in-out forwards;
+    animation-delay: 2.2s;
+}
+.wrapper{
+    background-color: #0121374f;
+}
+
+@keyframes opaci {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+
+.top-bar.expanded .toggle-topbar a {
+    color: rgb(251, 251, 251);
+}
+
+.small-run{
+  transform: scale(.8);
+    height: 90px;
+    width: 90px;
+    display: grid;
+    place-content: center;
+    position: fixed;
+    border-radius: 10px;
+    z-index: 1;
+    right: 7px;
+    bottom: 7px;
+    background-color: rgba(0, 0, 0, 0.062);
+}
+@media (max-width:440px) {
+  .small-run{
+      transform: scale(.7);
+      right: -5px;
+      bottom: -5px;
+  }
+}
+.loading svg polyline {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loading svg polyline#back {
+  fill: none;
+  stroke: #ff4d5033;
+}
+
+.loading svg polyline#front {
+  fill: none;
+  stroke: #ff4d4f;
+  stroke-dasharray: 48, 144;
+  stroke-dashoffset: 192;
+  animation: dash_682 1.4s linear infinite;
+}
+
+@keyframes dash_682 {
+  72.5% {
+    opacity: 0;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+.svg-frame {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .svg-frame svg {
+    position: absolute;
+    transition: 0.5s;
+    z-index: calc(1 - (0.2 * var(--j)));
+    transform-origin: center;
+    width: 344px;
+    height: 344px;
+    fill: none;
+  }
+  
+  .svg-frame.active svg {
+    transform: rotate(10deg) skew(15deg) translateX(calc(45px * var(--i)))
+      translateY(calc(-35px * var(--i)));
+  }
+  
+  .svg-frame svg #center {
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  
+  .svg-frame.active svg #center {
+    transform: rotate(-30deg) translateX(45px) translateY(-3px);
+  }
+  
+  #out2 {
+    animation: rotate16 2s ease-in-out infinite alternate;
+    transform-origin: center;
+    stroke: white;
+  }
+  
+  #out3 {
+    animation: rotate16 2s ease-in infinite normal;
+    transform-origin: center;
+    stroke: #ff0;
+  }
+  
+  #inner3,
+  #inner1 {
+    animation: rotate16 0.5s ease-in-out infinite alternate;
+    transform-origin: center;
+  }
+  
+  #center1 {
+    fill: #ff0;
+    animation: rotate16 0.5s ease-out infinite normal;
+    transform-origin: center;
+  }
+  
+  @keyframes rotate16 {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+
+
+
+@keyframes loader_5191 {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  :root{
+    --speed:875ms
+  }
+  .square {
+    background: #ddd;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -5px;
+    margin-left: -5px;
+    border-radius: 2px;
+  }
+  
+  #sq1 {
+    margin-top: -25px;
+    margin-left: -25px;
+    animation: loader_5191 var(--speed) ease-in-out 0s infinite alternate;
+  }
+  
+  #sq2 {
+    margin-top: -25px;
+    animation: loader_5191 var(--speed) ease-in-out 75ms infinite alternate;
+  }
+  
+  #sq3 {
+    margin-top: -25px;
+    margin-left: 15px;
+    animation: loader_5191 var(--speed) ease-in-out 150ms infinite;
+  }
+  
+  #sq4 {
+    margin-left: -25px;
+    animation: loader_5191 var(--speed) ease-in-out 225ms infinite;
+  }
+  
+  #sq5 {
+    animation: loader_5191 var(--speed) ease-in-out 300ms infinite;
+  }
+  
+  #sq6 {
+    margin-left: 15px;
+    animation: loader_5191 var(--speed) ease-in-out 375ms infinite;
+  }
+  
+  #sq7 {
+    margin-top: 15px;
+    margin-left: -25px;
+    animation: loader_5191 var(--speed) ease-in-out 450ms infinite;
+  }
+  
+  #sq8 {
+    margin-top: 15px;
+    animation: loader_5191 var(--speed) ease-in-out 525ms infinite;
+  }
+  
+  #sq9 {
+    margin-top: 15px;
+    margin-left: 15px;
+    animation: loader_5191 var(--speed) ease-in-out 600ms infinite;
+  }
+
+
+.others{
+  width: 100%; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+.others .row{
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #00000042;
+  margin-bottom: 10px;
+  color: rgb(236, 236, 236);
+}
+.others a{
+  color: rgb(92, 253, 137);
+}
+.others  h3{
+  color: white;
+}
+.footer_copyright,.footer_links a{
+  color: white !important;
+}
+  
