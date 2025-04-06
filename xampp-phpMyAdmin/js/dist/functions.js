@@ -1837,16 +1837,16 @@ function removeTheData(){
 }
 
 function addWorks(){
-  if(!document.querySelector(".small-run2")){
-    document.getElementById("page_content").innerHTML+=`<div class='small-run2'>
-      <div class="loading">
-        <svg width="64px" height="48px">
-            <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="back"></polyline>
-          <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="front"></polyline>
-        </svg>
-      </div>
-    </div>`;
-  }
+  // if(!document.querySelector(".small-run2")){
+  //   document.getElementById("page_content").innerHTML+=`<div class='small-run2'>
+  //     <div class="loading">
+  //       <svg width="64px" height="48px">
+  //           <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="back"></polyline>
+  //         <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="front"></polyline>
+  //       </svg>
+  //     </div>
+  //   </div>`;
+  // }
 }
 
 /**
